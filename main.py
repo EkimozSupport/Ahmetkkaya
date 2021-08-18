@@ -51,7 +51,7 @@ def d_or_c(user_id):
 	return InlineKeyboardMarkup(BUTTON)
 
 # Dc Komutunu Oluşturalım
-@K_G.on_message(filters.command("dc"))
+@K_G.on_message(filters.command("Sor"))
 async def _(client, message):
 	user = message.from_user
 
@@ -62,8 +62,8 @@ async def _(client, message):
 # Buttonlarımızı Yetkilendirelim
 @K_G.on_callback_query()
 async def _(client, callback_query):
-	d_soru=random.choice(D_LİST) # Random Bir Doğruluk Sorusu Seçelim
-	c_soru=random.choice(C_LİST) # Random Bir Cesaret Sorusu Seçelim
+	dogrular=random.choice(D_LİST) # Random Bir Doğruluk Sorusu Seçelim
+	cesaretliler=random.choice(C_LİST) # Random Bir Cesaret Sorusu Seçelim
 	user = callback_query.from_user # Kullanıcın Kimliğini Alalım
 
 	c_q_d, user_id = callback_query.data.split() # Buttonlarımızın Komutlarını Alalım

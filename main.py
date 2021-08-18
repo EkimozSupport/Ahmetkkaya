@@ -37,7 +37,7 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**Hi {}!**\n\n__I'm the fun bot version of @MissRose_bot, give the father whatever privileges Miss Rose has:) \n have you seen my music bot @MissRoseMusic_bot Oyun Komutu => /dc".format(
+	await message.reply_text(text="**Hi {}!**\n\n__I'm the fun bot version of @MissRose_bot, give the father whatever privileges Miss Rose has:) \n have you seen my music bot @MissRoseMusic_bot Oyun Komutu => /sor".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
@@ -46,8 +46,8 @@ async def _(client, message):
 
 # Dc Komutu İcin Olan Buttonlar
 def d_or_c(user_id):
-	BUTTON = [[InlineKeyboardButton(text="✅ Doğruluk", callback_data = " ".join(["d_data",str(user_id)]))]]
-	BUTTON += [[InlineKeyboardButton(text="💪 Cesaret", callback_data = " ".join(["c_data",str(user_id)]))]]
+	BUTTON = [[InlineKeyboardButton(text="✅ Doğrulukmu", callback_data = " ".join(["d_data",str(user_id)]))]]
+	BUTTON += [[InlineKeyboardButton(text="💪 Cesaretli", callback_data = " ".join(["c_data",str(user_id)]))]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Dc Komutunu Oluşturalım

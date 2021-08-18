@@ -37,7 +37,7 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**Hi {}!**\n\n__I'm the fun bot version of @MissRose_bot, give the father whatever privileges Miss Rose has:) \n have you seen my music bot @MissRoseMusic_bot Oyun Komutu => /sor".format(
+	await message.reply_text(text="**Hi {}!**\n\n__I'm the fun bot version of @MissRose_bot, give the father whatever privileges Miss Rose has:) \n have you seen my music bot @MissRoseMusic_bot playyer commend => /sor".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
